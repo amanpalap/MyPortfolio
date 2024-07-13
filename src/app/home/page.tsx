@@ -1,10 +1,11 @@
 "use client";
-import React from "react";
 import { GlobeDemo } from "@/modules/globe";
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { FlipWords } from "@/components/ui/flip-words";
 import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
 import Link from "next/link";
+import React from "react";
+
 
 export default function Home() {
     const typeWords = [
@@ -31,7 +32,7 @@ export default function Home() {
                         <TypewriterEffectSmooth words={typeWords} />
                     </div>
                     <div className="w-full text-xl">
-                        I can Develop <FlipWords className="text-red-500 font-bold" words={words} /> <br />
+                        I can Develop <FlipWords className="text-red-500 font-bold" words={words} /> Websites.
                     </div>
                 </div>
                 <div className="grid grid-cols-1 w-1/5 gap-y-4 px-4 py-4 z-50">
