@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 import { GlobeDemo } from "@/modules/globe";
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { FlipWords } from "@/components/ui/flip-words";
