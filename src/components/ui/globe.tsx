@@ -13,7 +13,7 @@ declare module "@react-three/fiber" {
 
 extend({ ThreeGlobe });
 
-const RING_PROPAGATION_SPEED = 5;
+const RING_PROPAGATION_SPEED = 3;
 const aspect = 1.2;
 const cameraZ = 300;
 
@@ -75,14 +75,14 @@ export function Globe({ globeConfig, data }: WorldProps) {
     const globeRef = useRef<ThreeGlobe | null>(null);
 
     const defaultProps = {
-        pointSize: 0.9,
+        pointSize: 1,
         atmosphereColor: "#ffffff",
-        showAtmosphere: false,
-        atmosphereAltitude: 0.0,
+        showAtmosphere: true,
+        atmosphereAltitude: 0.1,
         polygonColor: "rgba(255,255,255,0.7)",
         globeColor: "#1d072e",
         emissive: "#000000",
-        emissiveIntensity: 0.9,
+        emissiveIntensity: 0.1,
         shininess: 0.9,
         arcTime: 2000,
         arcLength: 0.9,
@@ -115,7 +115,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
 
     const _buildData = () => {
         const arcs = data;
-        const points = [];
+        let points = [];
         for (let i = 0; i < arcs.length; i++) {
             const arc = arcs[i];
             const rgb = hexToRgb(arc.color) as { r: number; g: number; b: number };
@@ -157,7 +157,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
                 .showAtmosphere(defaultProps.showAtmosphere)
                 .atmosphereColor(defaultProps.atmosphereColor)
                 .atmosphereAltitude(defaultProps.atmosphereAltitude)
-                .hexPolygonColor(() => {
+                .hexPolygonColor((e) => {
                     return defaultProps.polygonColor;
                 });
             startAnimation();
@@ -177,13 +177,13 @@ export function Globe({ globeConfig, data }: WorldProps) {
             .arcAltitude((e) => {
                 return (e as { arcAlt: number }).arcAlt * 1;
             })
-            .arcStroke(() => {
+            .arcStroke((e) => {
                 return [0.32, 0.28, 0.3][Math.round(Math.random() * 2)];
             })
             .arcDashLength(defaultProps.arcLength)
             .arcDashInitialGap((e) => (e as { order: number }).order * 1)
             .arcDashGap(15)
-            .arcDashAnimateTime(() => defaultProps.arcTime);
+            .arcDashAnimateTime((e) => defaultProps.arcTime);
 
         globeRef.current
             .pointsData(data)

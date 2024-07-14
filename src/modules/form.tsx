@@ -21,7 +21,7 @@ export default function FormPage() {
         setErrorMessage(""); // Clear error message when user types
     };
 
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault(); // Prevent default form submission
 
         const namePattern = /^[A-Za-z]+$/;
@@ -36,34 +36,32 @@ export default function FormPage() {
 
         if (!valid) return;
 
-        // If validation is successful, you can manually submit the form to the desired URL
+        // If validation is successful, submit the form
         const formData = new FormData();
         Object.keys(formValues).forEach((key) => {
             formData.append(key, formValues[key as keyof typeof formValues]);
         });
-        fetch("https://getform.io/f/bzylwdoa", {
-            method: "POST",
-            body: formData,
-        })
-            .then((response) => {
-                if (response.ok) {
-                    console.log(response)
-                    setIsSubmitted(true); // Set submission status to true upon successful submission
-                } else {
-                    throw new Error("Network response was not ok");
-                }
-            })
-            .then((data) => console.log("Form submitted", data))
-            .catch((error) => {
-                console.error("Error submitting form", error);
-                setErrorMessage("Error submitting form, please try again.");
+
+        try {
+            const response = await fetch("https://getform.io/f/bzylwdoa", {
+                method: "POST",
+                body: formData,
             });
+            if (response.ok) {
+                setIsSubmitted(true); // Set submission status to true upon successful submission
+            } else {
+                throw new Error("Network response was not ok");
+            }
+        } catch (error) {
+            console.error("Error submitting form", error);
+            setErrorMessage("Error submitting form, please try again.");
+        }
     };
 
     return (
         <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black">
             <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
-                Fill This Form To Contact
+                Fill This Form To <span className="text-blue-600 text-4xl mx-2">Contact</span>
             </h2>
             <form className="my-8" action="https://getform.io/f/bzylwdoa" method="POST" onSubmit={handleSubmit}>
                 <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
@@ -136,10 +134,10 @@ export default function FormPage() {
                     </Label>
                 </div>
                 {errorMessage && (
-                    <div className="text-sm text-red-500 mb-4">{errorMessage}</div>
+                    <ErrorText>{errorMessage}</ErrorText>
                 )}
                 {isSubmitted && (
-                    <div className="text-sm text-green-500 mb-4">Form submitted successfully!</div>
+                    <SuccessText>Form submitted successfully!</SuccessText>
                 )}
                 <button
                     className="bg-gradient-to-br text-sm relative group/btn from-black dark:from-zinc-900 dark:to-zinc-900 to-neutral-600 block dark:bg-zinc-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
@@ -173,5 +171,9 @@ const LabelInputContainer = ({
 );
 
 const ErrorText = ({ children }: { children: React.ReactNode }) => (
-    <span className="text-sm text-red-500">{children}</span>
+    <div aria-live="assertive" className="text-sm text-red-500 mb-4">{children}</div>
+);
+
+const SuccessText = ({ children }: { children: React.ReactNode }) => (
+    <div aria-live="polite" className="text-sm text-green-500 mb-4">{children}</div>
 );

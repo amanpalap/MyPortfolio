@@ -26,17 +26,17 @@ export default function Home() {
       <div className="w-3/5 items-center flex flex-wrap justify-between">
         <div className="w-4/5 px-10 grid">
           <h1 className="w-full font-bold text-5xl mb-4">
-            Hi, My Name is Aman Pal
+            Hi, My Name is <span className="text-blue-500">Aman Pal</span>
           </h1>
           <div className="w-full">
             <TypewriterEffectSmooth words={typeWords} />
           </div>
           <div className="w-full text-xl">
-            I can Develop <FlipWords className="text-red-500 font-bold" words={words} /> Websites.
+            I can Develop <FlipWords className="text-blue-500 font-bold" words={words} /> Websites.
           </div>
         </div>
         <div className="grid grid-cols-1 w-1/5 gap-y-4 px-4 py-4 z-50">
-          <Link className="flex items-center w-full justify-evenly" href="/home">Home</Link>
+          <Link className="flex items-center w-full justify-evenly" href="/">Home</Link>
           <Link className="flex items-center w-full justify-evenly" href="/about">About</Link>
           <Link className="flex items-center w-full justify-evenly" href="/projects">Projects</Link>
           <Link className="flex items-center w-full justify-evenly" href="/contact">Contact</Link>
