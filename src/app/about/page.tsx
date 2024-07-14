@@ -1,6 +1,6 @@
 import React from "react";
-import { BackgroundBeams } from "@/components/ui/background-beams";
 import Image from "next/image";
+
 
 const SkillButton = ({ src, alt, label, className, classname }: any) => (
     <button className="relative hover:scale-110 transition-scale duration-200 inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
