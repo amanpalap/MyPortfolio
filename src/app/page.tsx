@@ -35,12 +35,6 @@ export default function Home() {
             I can Develop <FlipWords className="text-blue-500 font-bold" words={words} /> Websites.
           </div>
         </div>
-        <div className="grid grid-cols-1 w-1/5 gap-y-4 px-4 py-4 z-50">
-          <Link className="flex items-center w-full justify-evenly" href="/">Home</Link>
-          <Link className="flex items-center w-full justify-evenly" href="/about">About</Link>
-          <Link className="flex items-center w-full justify-evenly" href="/projects">Projects</Link>
-          <Link className="flex items-center w-full justify-evenly" href="/contact">Contact</Link>
-        </div>
       </div>
       <BackgroundBeams />
     </div>
