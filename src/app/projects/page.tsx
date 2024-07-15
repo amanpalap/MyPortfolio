@@ -10,78 +10,63 @@ export default function HeroParallaxDemo() {
 
     const products = [
         {
-            title: "Moonbeam",
+            title: "Nerozen",
             link: "https://nerozen.netlify.app/",
             thumbnail: a,
         },
         {
-            title: "Cursor",
-            link: "https://nerozen.netlify.app/",
+            title: "Weather-App",
+            link: "https://customweatherappresponsive.netlify.app/",
             thumbnail: b,
         },
         {
-            title: "Rogue",
-            link: "https://mockup1-auth.netlify.app/",
+            title: "Fyle",
+            link: "https://fyle-jade.vercel.app/",
             thumbnail: c,
         },
         {
-            title: "Moonbeam",
+            title: "Nerozen",
             link: "https://nerozen.netlify.app/",
             thumbnail: a,
         },
         {
-            title: "Cursor",
-            link: "https://nerozen.netlify.app/",
+            title: "Weather-App",
+            link: "https://customweatherappresponsive.netlify.app/",
             thumbnail: b,
         },
         {
-            title: "Rogue",
-            link: "https://mockup1-auth.netlify.app/",
+            title: "Fyle",
+            link: "https://fyle-jade.vercel.app/",
             thumbnail: c,
         },
         {
-            title: "Moonbeam",
+            title: "Nerozen",
             link: "https://nerozen.netlify.app/",
             thumbnail: a,
         },
         {
-            title: "Cursor",
-            link: "https://nerozen.netlify.app/",
+            title: "Weather-App",
+            link: "https://customweatherappresponsive.netlify.app/",
             thumbnail: b,
         },
         {
-            title: "Rogue",
-            link: "https://mockup1-auth.netlify.app/",
+            title: "Fyle",
+            link: "https://fyle-jade.vercel.app/",
             thumbnail: c,
         },
         {
-            title: "Moonbeam",
+            title: "Nerozen",
             link: "https://nerozen.netlify.app/",
             thumbnail: a,
         },
         {
-            title: "Cursor",
-            link: "https://nerozen.netlify.app/",
+            title: "Weather-App",
+            link: "https://customweatherappresponsive.netlify.app/",
             thumbnail: b,
         },
         {
-            title: "Rogue",
-            link: "https://mockup1-auth.netlify.app/",
-            thumbnail: c,
-        },
-        {
-            title: "Moonbeam",
-            link: "https://nerozen.netlify.app/",
-            thumbnail: a,
-        },
-        {
-            title: "Cursor",
-            link: "https://nerozen.netlify.app/",
-            thumbnail: b,
-        },
-        {
-            title: "Rogue",
-            link: "https://mockup1-auth.netlify.app/",
+            title: "Fyle",
+            link: "https://fyle-jade.vercel.app/",
             thumbnail: c,
         },
     ];
