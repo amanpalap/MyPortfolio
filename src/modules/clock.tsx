@@ -21,5 +21,5 @@ export default function Clock() {
         return `${hours}:${minutes} ${ampm}`;
     };
 
-    return <div className='lg:text-3xl text-xl md:text-3xl mt-2 mr-2 lg:mr-10 lg:mt-5 md:mr-10 md:mt-5 text-blue-500 font-extrabold'>{formatTime(time)}</div>;
+    return <div className='lg:text-3xl bg-white px-2 rounded-2xl text-lg md:text-3xl mt-2 mr-2 lg:mr-10 lg:mt-5 md:mr-10 md:mt-5 text-blue-500 font-black'>{formatTime(time)}</div>;
 };

@@ -18,7 +18,7 @@ export default function Home() {
   const words = ["Responsive", "Aesthetic", "Modern"];
   return (
     <div className="w-full items-center flex flex-wrap lg:min-h-screen md:min-h-screen bg-black text-white">
-      <div className="lg:w-2/5 mt-10 md:mt-0 lg:mt-0 w-full items-center justify-center md:w-2/5">
+      <div className="lg:w-2/5 mt-0 md:mt-0 lg:mt-0 w-full items-center justify-center md:w-2/5">
         <GlobeDemo />
       </div>
       <div className="md:w-3/5 lg:w-3/5 w-full items-center flex flex-wrap justify-between mt-10 md:mt-0 lg:mt-0">

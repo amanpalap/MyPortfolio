@@ -7,7 +7,7 @@ export default function NavBar() {
     const [hover, setHover] = useState("");
 
     return (
-        <div className="md:grid px-20 flex justify-center lg:grid px-auto lg:grid-cols-1 md:grid-cols-1 w-full font-mono lg:bg-transparent md:bg-transparent bg-black font-bold text-lg md:w-44 lg:w-44 gap-y-8 lg:px-4 md:px-4 py-4 z-50">
+        <div className="md:grid px-20 flex justify-center lg:grid px-auto lg:grid-cols-1 md:grid-cols-1 w-full font-mono lg:bg-transparent md:bg-transparent bg-black font-bold text-lg md:w-44 lg:w-44 gap-y-8 lg:px-4 md:px-4 py-4 z-50 gap-x-4">
             <Link className="flex items-center w-full md:justify-between lg:justify-between justify-center" href="/">
                 <span className={`transition-opacity mx-auto duration-300 ${hover === 'home' ? 'opacity-100' : 'opacity-0'} md:block lg:block hidden`}>Home</span>
                 <div

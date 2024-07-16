@@ -26,7 +26,7 @@ export default function RootLayout({
         <div className="md:fixed lg:fixed fixed z-50 flex md:right-0 lg:right-0 items-center bottom-0 lg:justify-end md:justify-end w-full lg:w-auto md:w-auto justify-center lg:min-h-screen md:min-h-screen">
           <NavBar />
         </div>
-        <div className="mb-24 md:mb-0 lg:mb-0">
+        <div className="mb-24 w-full md:mb-0 lg:mb-0">
           {children}
         </div>
       </body>

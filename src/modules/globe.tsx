@@ -412,7 +412,7 @@ export function GlobeDemo() {
                     className="div"
                 >
                 </motion.div>
-                <div className="w-full cursor-pointer -bottom-30 h-96 md:h-full z-10">
+                <div className="w-full relative cursor-pointer -bottom-30 h-96 md:h-full z-50">
                     <World data={sampleArcs} globeConfig={globeConfig} />
                 </div>
             </div>
