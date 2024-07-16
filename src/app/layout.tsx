@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className={inter.className}>
-        <div className="md:fixed lg:fixed absolute z-50 right-0">
+        <div className="md:fixed lg:fixed absolute m-0 z-50 right-0">
           <Clock />
         </div>
         <div className="md:fixed lg:fixed fixed z-50 flex md:right-0 lg:right-0 items-center bottom-0 lg:justify-end md:justify-end w-full lg:w-auto md:w-auto justify-center lg:min-h-screen md:min-h-screen">
