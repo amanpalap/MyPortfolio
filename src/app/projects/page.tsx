@@ -6,14 +6,14 @@ export default function HeroParallaxDemo() {
 
     const products = [
         {
-            title: "Green Grocers",
-            link: "https://greengrocerss.netlify.app/",
-            thumbnail: "/grocers.png",
-        },
-        {
             title: "Nerozen",
             link: "https://nerozen.netlify.app/",
             thumbnail: "/1.png",
+        },
+        {
+            title: "Green Grocers",
+            link: "https://greengrocerss.netlify.app/",
+            thumbnail: "/grocers.png",
         },
         {
             title: "Weather-App",
